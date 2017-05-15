@@ -16,3 +16,14 @@ class Offer(models.Model):
 
     def __str__(self):
      	  return self.descriptions
+
+
+class companyProfile(models.Model):
+    username=models.CharField(max_length=200)
+    active = models.CharField(max_length=1000)
+    email=models.CharField(max_length=200)
+    
+    password=models.CharField(max_length=200)
+
+    def __str__(self):
+     	  return self.username
