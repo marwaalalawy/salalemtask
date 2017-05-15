@@ -4,17 +4,17 @@ from django.http import HttpResponse
 from .models import Offer
 
 def index(request):
-	return HttpResponse("hello")
+	return HttpResponse("<div>Offers</div> <div>hello999</div> ")
 
 
 	def login(request):
-    # username = request.POST['username']
-    # password = request.POST['password']
-    # user = authenticate(request, username=username, password=password)
-    #   if user is not None:
-    #     auth.login(request, user)
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+      if user is not None:
+        auth.login(request, user)
          return HttpResponse("hi")
-    # else:
-    #      return HttpResponseRedirect('/accounts/invalid') 
+    else:
+         return HttpResponseRedirect('/accounts/invalid') 
 
 # Create your views here.
