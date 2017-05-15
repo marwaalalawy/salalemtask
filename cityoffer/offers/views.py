@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from .models import Offer,companyProfile
+from .models import Offer,companyProfile,comments
 
 def index(request):
 	return HttpResponse("<div>Offers</div> <div>hello999</div> ")
